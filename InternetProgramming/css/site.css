@@ -1,0 +1,418 @@
+div.main_header {
+
+	height: 100px;
+	
+	line-height: 100px;
+	
+	text-align: center;
+	
+	vertical-align: middle;
+
+}
+
+
+
+
+span.main_header {
+	color: #ffffff;
+
+	font-size: 250%;
+
+}
+
+
+span.body_text {
+
+	font-size: 150%;
+
+}
+
+/*Project 1 HTML/CSS*/
+/*******************************************************************/
+img.center-image {
+    display: block;
+    margin: 0 auto;
+   
+}
+
+.center-text-element {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}/*used in project 2*/
+
+p.align-left {
+    text-align: left;
+}
+
+.border {
+    border: 2px solid #73AD21;
+    padding: 10px;
+}
+/*Displaying all sections center and paragraphs*/
+/****************************************************************************************************************************/
+
+/*Personal Homepage CSS*/
+
+li.highschool {
+    font-style: italic;
+}
+
+li.college {
+    font-weight: bold;
+}
+
+li.certification {
+    text-decoration: underline;
+}
+/*italic, bold, and underline*/
+
+h2.about {
+    color: blueviolet;
+}
+
+h2.hobbies {
+    color: olivedrab;
+}
+
+h2.education {
+    color: peru;
+}
+/*color of headers*/
+
+a.hover:hover {
+    font-size: 150%;
+}
+/*Appalachian Mountains link to 150%*/
+/**************************************************************************************8/
+
+/*Schedule CSS*/
+
+table, th, td {
+    border: 1px solid black;
+}
+/*table border*/
+
+table.center-table{
+    text-align: center;
+    width: 100%;
+}
+/*center table*/
+
+tr:nth-child(even) {
+    background-color: grey;
+    color: white;
+}
+/*every other row is grey; striped rows*/
+
+tr:first-child {
+    background-color: red;
+}
+/*first header row is red*/
+
+.center-list {
+    position: relative;
+    right: -240px;
+    width: 300px;
+    text-align: left;
+}
+/*centering the multi-leveled list*/
+
+ol.list-type-1 {
+    list-style-type: decimal;
+}
+/*list-type 1, 2, 3, 4,...*/
+
+ol.list-type-A {
+    list-style-type: upper-latin;
+}
+/*list-type A, B, C, D, E,....*/
+/****************************************************************************************************************/
+
+/*Account CSS*/
+
+.form-text label {
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}/*useed in project2*/
+/*centering and aligning text labels*/
+
+.form-radio {
+    display: block;
+    position: relative;
+    text-align: left;
+    right: -300px;
+}
+/*centering and aligning radio buttons*/
+
+.column {
+    float: left;
+    width: 15%;
+    padding: 0;
+    display: block;
+    position: relative;
+    text-align: left;
+    right: -300px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/*centering, aligning, 2 colums 4 rows for checkboxes*/
+
+/*custom radio */
+
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/*hide the original buttons*/
+
+.container-radio input ~ .check-toggle-radio {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: grey;
+} 
+/*create custom button gray background and black border*/
+
+.container-radio input:hover ~ .check-toggle-radio  {
+    background-color: lightgreen;
+}
+/*hover radio button*/
+
+.container-radio input:checked ~ .check-toggle-radio {
+    background-color: green;
+}
+/*clicked radio button*/
+
+.container-radio input:checked ~ .check-toggle-radio::after {
+    content: '';
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+/*inner circle for radio button after click*/
+/*i did the css like this so that it would only affect this particular group of radio buttons and checkboxes instead
+of all with input[type="radio" (or "checkbox")] also wanted to learn about pseudo classes*/
+
+/*custom checkbox*/
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/*hide original checkbox*/
+
+.container-checkbox input ~.check-toggle-checkbox {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: grey;
+}
+/*custom checkbox shape with gray background and black border*/
+
+.container-checkbox input:hover ~ .check-toggle-checkbox {
+    background-color: lightblue;
+}
+/*hover checkbox*/
+
+.container-checkbox input:checked ~ .check-toggle-checkbox {
+    background-color: blue;
+}
+/*clicked checkbox*/
+
+.container-checkbox input:checked ~ .check-toggle-checkbox::after {
+    content: '';
+    top: 1px;
+    left: 0;
+    right: 0px;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    position: absolute;
+    background-color: white;
+}
+/*inner square for checkbox after click*/
+
+/*Project 2 JS Part 1**/
+
+img.pic {
+    height: 75%;
+    width: 75%; 
+}
+
+.center-text-element {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.form-text label {
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}
+
+table.center-table{
+    text-align: center;
+    width: 100%;
+}
+
+.form-labels label {
+    display: inline-block;
+    width: 25%;
+    text-align: left;
+}
+
+input[type="month"], select {
+    width: 44%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: plum;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; 
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+h2.paleViolet {
+    color: palevioletred;
+}
+
+/**********************************************/
+body.thCells th {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+body.tdCells td {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+body.trCells tr {
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+body.table table {
+    background-color: white;
+    color: black;
+    
+}
+/**********************************************/
+
+body.table2 table {
+    border: black;
+}
+
+body.tdCells2 td {
+    background-color: white;
+    border: black;
+}
+/********************************************************/
+/* The following CSS code blocks produce a pop-up modal window to display additional movie information */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+   
+   /* Modal Content */
+   .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+   }
+   
+   /* The Close Button */
+   .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+   }
+   
+   .close:hover,
+   .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+   }
+   
+   .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+   }
+   
+   .modal-body {padding: 2px 16px;}
+   
+   .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+   }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body>
+        <div class="center-text-element">
+            <h1>myMovies Xpress!</h1>
+        </div>
+        <?php if(!empty($message)) { ?>
+                <div style="color:red;" class="center-text-element"><?php echo $message; ?></div><br>
+        <?php 
+            } 
+        ?>
+        <div class="center-text-element">Please login below using your username and password</div>
+        <div class="center-text-element border">
+            <form class="form-text" action="./logon.php" method="post"> 
+                <label>Username:</label><input type="text" name="username" required><br>
+                <label>Password:</label><input type="text" name="password" required><br><br>
+                <button type="submit">Login</button>&nbsp;<button type="reset">Clear</button>
+            </form>
+        </div>
+       
+    </body>
+    <footer>
+        <br><hr><br>
+        <div class="center-text-element">
+            <a href="./../index.html">ePortfolio</a>
+        </div>  
+    </footer>
+</html>

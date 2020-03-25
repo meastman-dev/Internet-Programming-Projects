@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reset Password</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body>
+        <div class="center-text-element">
+            <div>
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <div>
+                <p>Reset password below</p>
+            </div>
+            <div class="form-text border">
+                <form action="./logon.php" onsubmit="return validateResetPasswordForm();" method="post">
+                    <label>Password:</label><input type="password" id="pass" name="password" required><br>
+                    <label>Confirm Password:</label><input type="password" id="confirmPass" name="password" required><br><br><br>
+                    <button type="button" onclick="confirmCancel('reset');">Cancel</button>&nbsp;
+                    <button type="reset">Clear</button>&nbsp;
+                    <button type="submit">Reset Password</button>
+                    <input type="text" value="reset" name="action" hidden>
+                    <input type="text" value="<?php echo $userId;?>" name="user_id" hidden>
+                </form>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

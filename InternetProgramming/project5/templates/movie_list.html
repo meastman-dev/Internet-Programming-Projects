@@ -1,0 +1,17 @@
+
+<table style="width:100%;">
+    <?php foreach($tempArray as $movieID) {
+        $movieArray = getMovieData($movieID);
+        $id = $movieArray['ID'];
+        $title = $movieArray['Title'];
+        $year = $movieArray['Year'];
+        $poster = $movieArray['Poster'];
+    ?>   
+    <tr>
+        <td><img src="<?php echo $poster;?>" height="100"></td>
+        <td><?php echo $title; ?>(<?php echo $year; ?>)</td>
+        <td><a href="javascript:void(0);" onclick="displayMovieInformation('<?php echo $id; ?>');">View More Info</a></td>
+        <td id="x"><?php echo "<td><a href='#' onclick='confirmRemove(\"".$ititle."\",\"".$id."\");'>X</a></td>"; ?>
+    </tr>
+    <?php } ?>
+</table>

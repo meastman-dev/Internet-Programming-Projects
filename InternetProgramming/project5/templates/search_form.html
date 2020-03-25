@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body>
+        <div style='text-align: left;'>Welcome, <?php echo $_SESSION['name']; ?> (<a href="#" onclick="confirmLogout();">Logout</a>)</div>
+        <div class="center-text-element">
+            <div>
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <div class="border form-text">
+                <form action="./search.php" method="post">
+                    <label>Keyword:</label><input type="text" name="searchString" required><br><br>
+                    <button type="button" onclick="confirmCancel('search');">Cancel</button>&nbsp;
+                    <button type="reset">Clear</button>&nbsp;<button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

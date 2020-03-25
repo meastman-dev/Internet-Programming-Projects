@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Forgot Password</title>
+            <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body>
+        <div class="center-text-element">
+            <div>
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <div>
+                <p>Fill form out below to reset password.</p>
+            </div>
+            <div class="form-text border">
+                <form action="./logon.php" method="post">
+                    <label>Username:</label><input type="text" name="username" required><br><br><br>
+                    <button type="button" onclick="confirmCancel('forgot');">Cancel</button>&nbsp;
+                    <button type="reset">Reset</button>&nbsp;
+                    <button type="submit">Submit</button>
+                    <input type="text" value="forgot" name="action" hidden>
+                </form>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create an Account</title>
+        <link rel="stylesheet" type="text/css" href="../css/site.css">
+    </head>
+    <body>
+        <h2 class="center-text-element">Create an Account</h2><br>
+        <div class="center-text-element border">
+            <form action="https://unfinishedbusiness.app/alert.php" method="post">
+                <div class="form-text">
+                    <label>First Name:</label><input type="text" name="fname"><br>
+                    <label>Last Name:</label><input type="text" name="lname"><br>
+                    <label>Email Address:</label><input type="text" name="email"><br><br>
+                    <label>Password:</label><input type="password" name="password"><br>
+                    <label>Confirm Password:</label><input type="password"><br><br>
+                    <label>Birth Date:</label><input type="date" name="date" value="2015-10-21" min="1970-01-01" max="2020-12-31" style="width:140px">
+                </div>
+                <br><br>
+                <h4>Degree Track</h4>
+                <div class="form-radio container-radio">  
+                    <label>
+                        <input type="radio" name="radio" value="Computer Science"><span class="check-toggle-radio"></span>&nbsp;
+                        <a href="https://www.unf.edu/catalog/link/CCEC-BSCCISCIS3/" target=_blank>Computer Science</a>
+                    </label><br>
+                    <label>
+                        <input type="radio" name="radio" value="Information Science"><span class="check-toggle-radio"></span>&nbsp;
+                        <a href="https://www.unf.edu/catalog/link/CCEC-BSCCISCIS1/" target="_blank">Information Science</a>
+                    </label><br>
+                    <label>
+                        <input type="radio" name="radio" value="Information Systems"><span class="check-toggle-radio"></span>&nbsp;
+                        <a href="https://www.unf.edu/catalog/link/CCEC-BSCCISCIS2/" target="_blank">Information Systems</a>
+                    </label><br>
+                    <label>
+                        <input type="radio" name="radio" value="Information Technology"><span class="check-toggle-radio"></span>&nbsp;
+                        <a href="https://www.unf.edu/catalog/link/CCEC-BSCCISCIS7/" target="_blank">Information Technology</a>
+                    </label><br>
+                </div>
+                <br><br>
+                <h4>Programming Language Experience</h4>
+                <div class="form-checkbox container-checkbox"><!--2 columns, 4 rows-->
+                    <div class="row">
+                        <div class="column">
+                            <label><input type="checkbox" name="checkOne" value="C"><span class="check-toggle-checkbox"></span>&nbsp;C</label><br>
+                            <label><input type="checkbox" name="checkTwo" value="C#"><span class="check-toggle-checkbox"></span>&nbsp;C#</label><br>
+                            <label><input type="checkbox" name="checkThree" value="Java"><span class="check-toggle-checkbox"></span>&nbsp;Java</label><br>
+                            <label><input type="checkbox" name="checkFour" value="JavaScript"><span class="check-toggle-checkbox"></span>&nbsp;JavaScript</label><br>
+                        </div>
+                        <div class="column">
+                            <label><input type="checkbox" name="checkFive" value="PHP"><span class="check-toggle-checkbox"></span>&nbsp;PHP</label><br>
+                            <label><input type="checkbox" name="checkSix" value="Python"><span class="check-toggle-checkbox"></span>&nbsp;Python</label><br>
+                            <label><input type="checkbox" name="checkSeven" value="Visual Basic"><span class="check-toggle-checkbox"></span>&nbsp;Visual Basic</label><br>
+                            <label><input type="checkbox" name="checkEight" value="Other"><span class="check-toggle-checkbox"></span>&nbsp;Other</label>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <button type="reset">Reset</button> &nbsp;
+                    <button type="submit">Submit</button>
+                </div>
+                <input type="hidden" name="username" value="642829952" /><!--check later-->
+                <input type="hidden" name="to_email_address" value="madman3161@gmail.com" />
+                <input type="hidden" name="to_display_name" value="Mason Eastman" />
+            </form>
+        </div>
+    </body>
+    <footer>
+        <br><hr><br>
+        <div class="center-text-element">
+            <a href="index.html">Personal Webpage</a>&nbsp;
+            <a href="../index.html">ePortfolio</a>
+        </div>  
+    </footer>
+</html>

@@ -1,0 +1,43 @@
+<?php
+
+    $title = $array['Title'];
+    $year = $array['Year'];
+    $rating = $array['Rating'];
+    $runtime = $array['Runtime'];
+    $genre = $array['Genre'];
+    $actors = $array['Actors'];
+    $director = $array['Director'];
+    $writer = $array['Writer'];
+    $plot = $array['Plot'];
+
+    $string = '';
+    if($array != NULL) {
+        $string = " 
+            <div class='modal-header'>
+                <span class='close'>[Close]</span>
+                <h2>".$title."(".$year.") Rated ".$rating." ".$runtime."<br />".$genre."</h2>
+            </div>
+            <div class='modal-body'>
+                <p>Actors: ".$actors."<br />Directed By: ".$director." <br />Written By: ".$writer."</p>
+            </div>
+            <div class='modal-footer'>
+                <p id='plot'>".$plot."</p>
+            </div>
+        ";
+    }
+    else {
+        $string = " 
+            <div class='modal-header'>
+                <span class='close'>[Close]</span>
+                <h2>Title (Year) Rated Rating Runtime<br />Genre</h2>
+            </div>
+            <div class='modal-body'>
+                <p>Actors: Actors<br />Directed By: Director<br />Written By: Writer</p>
+            </div>
+            <div class='modal-footer'>
+                <p>Invalid Movie ID!</p>
+            </div>
+        ";
+    }
+    echo $string;   
+?>

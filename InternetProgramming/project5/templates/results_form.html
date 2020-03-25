@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body class="table2 thCells tdCells2 trCells">
+        <div style='text-align: left;'>Welcome, <?php echo $_SESSION['name']; ?> (<a href="#" onclick="confirmLogout();">Logout</a>)</div>
+        <div class="center-text-element">
+            <div class="center-text-element">
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <?php
+                $count = count($array); 
+            ?>
+            <div class="border">
+                <div><?php echo $count;?> Movies Found</div><br><br>
+                <div> <button type="button" onclick="confirmCancel('search');">Cancel</button></div><br><br>
+                <div>
+                <?php
+                    if($count >= 1) {
+                ?>
+                    <table style="width: 100%;">
+                <?php 
+                    foreach($array as $searchResult) {
+                        $poster = $searchResult["Poster"];
+                        $title = $searchResult["Title"];
+                        $year = $searchResult["Year"];
+                        $imdbID = $searchResult["imdbID"];      
+                ?>  
+                        <tr>
+                            <td><img src="<?php echo $poster;?>" height="100"></td>
+                            <td><a href="https://www.imdb.com/title/<?php echo $imdbID;?>/" target="_blank"><?php echo $title; ?>(<?php echo $year; ?>)</a></td>
+                            <?php echo "<td><a href='#' onclick='addMovie(\"".$imdbID."\");'>+</a></td>"; ?>
+                        </tr>
+                <?php
+                        }
+                ?>
+                    </table>
+                <?php 
+                    }
+                ?>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>

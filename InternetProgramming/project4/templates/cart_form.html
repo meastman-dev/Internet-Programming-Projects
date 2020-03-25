@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping Cart</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body class="table2 thCells tdCells2 trCells">
+        
+        <div style="text-align:left;">Welcome, <?php echo $_SESSION['displayName']; ?> (<a href="#" onclick="confirmLogout();">Logout</a>)</div>
+        <div class="center-text-element">
+            <h1>myMovies Xpress!</h1>
+        </div>
+        <?php ob_start() ?>
+        <div class="center-text-element border">
+            <?php
+                $count = count($movieArray);
+            ?>
+            <div><?php echo $count;?> Movies in Your Shopping Cart</div><br><br>
+            <?php 
+                if($count === 0) {
+                    echo "<div>Add Some Movies to Your Cart</div>";
+                }
+            ?>
+            <table style="width:100%;">  
+            <?php
+                if($count >= 1) {
+                    foreach($movieArray as $movieID) {
+                        $movie = file_get_contents('http://www.omdbapi.com/?apikey=fc7e3ddf&i='.$movieID.'&type=movie&r=json');
+                        $array = json_decode($movie, true);
+                        $title = $array["Title"];
+                        $poster = $array["Poster"];
+                        $year = $array["Year"];
+                        $imdbID = $array["imdbID"];
+            ?>
+                <tr>
+                    <td><img src="<?php echo $poster;?>" height="100"></td>
+                    <td><a href="https://www.imdb.com/title/<?php echo $imdbID;?>/" target="_blank"><?php echo $title; ?>(<?php echo $year; ?>)</a></td>
+        <?php $message1 = ob_get_contents();?>
+                    <?php echo "<td><a href='#' onclick='confirmRemove(\"".$imdbID."\",\"".$imdbID."\");'>X</a></td>"; ?>
+        <?php ob_start() ?>
+                </tr>     
+            <?php
+                    } 
+                }
+            ?>
+            </table><br>
+        </div>
+        <?php $message2 = ob_get_contents(); ?>
+        <div class="center-text-element">
+            <button type="button"><a href="./search.php" style="text-decoration: none; color: black; cursor: default;">Add Movie</a></button>&nbsp;
+            <button type="button" onclick="confirmCheckout();">Checkout</button>  
+        </div>
+        <script src="./script.js"></script>
+    </body>
+    <footer>
+        <br><hr><br>
+        <div class="center-text-element">
+            <a href="./../index.html">ePortfolio</a>
+        </div>  
+    </footer>
+</html>

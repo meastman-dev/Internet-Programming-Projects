@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <?php 
+        $none = '';
+        if($forEmail === true) {
+            $none = 'display: none;';
+        }
+    ?>
+    <head>
+        <title id="title" style="<?php echo $none; ?>">Shopping Cart</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body class="table2 thCells tdCells2 trCells">
+        <div style="text-align:left;<?php echo $none; ?>;">Welcome, <?php echo $_SESSION['name']; ?> (<a href="#" onclick="confirmLogout();">Logout</a>)</div>
+        <div class="center-text-element">
+            <div>
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <div class="border">
+            <?php   if($count >= 1) { ?>
+                        <div><?php echo $count; ?> Movies in Your Shopping Cart</div><br><br>
+                        <div>
+                            <select id='select_order' onchange='changeMovieDisplay();'>
+                                <option value='0' default>Movie Title</option>
+                                <option value='1'>Runtime (shortest -> longest)</option>
+                                <option value='2'>Runtime (longest -> shortest)</option>
+                                <option value='3'>Year (old -> new)</option>
+                                <option value='4'>Year (new -> old)</option>
+                            </select>
+                        </div>
+            <?php echo "<div id='shopping_cart'>".$list."</div>"; ?>
+            <?php
+                    }
+                    else {
+            ?>
+                    <div>Add Some Movies to Your Cart</div><br><br>
+            
+            <?php
+                    } 
+            ?>
+            </div><br><br><br>
+            <div style="<?php echo $none; ?>">
+                <button type="button"><a href="./search.php" style="text-decoration: none; color: black; cursor: default;">Add Movie</a></button>&nbsp;
+                <button type="button" onclick="confirmCheckout();">Checkout</button>  
+            </div>
+        </div>
+        <div style="<?php echo $none; ?>">
+            <div id='modalWindow' class='modal'>
+                <div id='modalWindowContent' class='modal-content'>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+        <?php 
+            if($forEmail === true) {
+                echo "<script>document.getElementById('x').style.display = 'none';</script>";
+            }
+        ?>
+    </body>
+    <footer style="<?php echo $none; ?>">
+        <br><hr><br>
+        <div class="center-text-element">
+            <a href="./../index.html">ePortfolio</a>
+        </div>  
+    </footer>
+</html>

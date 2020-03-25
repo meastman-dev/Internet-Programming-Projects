@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Account</title>
+        <link rel="stylesheet" type="text/css" href="./../css/site.css">
+    </head>
+    <body>
+        <div class="center-text-element">
+            <div>
+                <h1>myMovies Xpress!</h1>
+            </div>
+            <div>
+                <p>Enter credentials down below to create an account</p>
+            </div>
+            <div class="form-text border">
+                <form action="./logon.php" onsubmit="return validateCreateAccountForm();" method="post">
+                    <label>Full Name:</label><input type="text" id="name" name="name" required><br>
+                    <label>Email Address:</label><input type="email" id="email" name="email" required><br>
+                    <label>Confirm Email Address:</label><input type="email" id="confirmEmail" name="confirmEmail" required><br>
+                    <label>Username:</label><input type="text" id="user"  name="username" required><br><br><br>
+                    <label>Password:</label><input type="password" id="pass" name="password" required><br>
+                    <label>Confirm Password:</label><input type="password" id="confirmPass" name="confirmPass" required><br><br><br>
+                    <button type="button" onclick="confirmCancel('create');">Cancel</button>&nbsp;
+                    <button type="reset">Reset</button>&nbsp;
+                    <button type="submit">Create Account</button>
+                    <input type="text" value="create" name="action" hidden>
+                </form>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
